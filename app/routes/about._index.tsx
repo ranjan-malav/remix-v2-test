@@ -1,14 +1,14 @@
 
 // URL - "/about"
-export default function Index() {
+export default function AboutContent() {
     return (
         <>
-            <p>About _index Page</p>
+            <p>About Content</p>
         </>
     )
 }
 
 export function loader() {
-    console.log("Loader for about._index.jsx")
+    console.log("Loader for about._index.tsx")
     return null
 }

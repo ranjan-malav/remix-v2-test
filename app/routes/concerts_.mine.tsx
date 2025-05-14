@@ -1,15 +1,15 @@
 
 // URL - "/concerts/mine" without parent layout
-export default function Index() {
+export default function ConcertMine() {
     return (
         <>
-            <p>I don't use parent concerts.tsx layout</p>
+            <p>Concert Mine content without Concerts Layout</p>
         </>
     )
 }
 
 
 export function loader() {
-    console.log("Loader for concerts_.mine.jsx")
+    console.log("Loader for concerts_.mine.tsx")
     return null
 }

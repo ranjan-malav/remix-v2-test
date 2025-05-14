@@ -43,7 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <div>
-      <h1>Root Parent Content</h1>
+      <h1>Root Layout</h1>
       <Outlet />
     </div>
   )

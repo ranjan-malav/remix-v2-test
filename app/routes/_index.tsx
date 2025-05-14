@@ -139,6 +139,6 @@ const resources = [
 ];
 
 export function loader() {
-  console.log("Loader for _index.jsx")
+  console.log("Loader for _index.tsx")
   return null
 }

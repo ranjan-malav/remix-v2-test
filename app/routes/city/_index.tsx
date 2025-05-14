@@ -1,15 +1,15 @@
 import { Outlet } from "@remix-run/react"
 
-export default function AboutLayout() {
+export default function CityContent() {
     return (
         <>
-            <p>About Layout</p>
+            <p>City Content, This file doesn't work?</p>
             <Outlet />
         </>
     )
 }
 
 export function loader() {
-    console.log("Loader for about.tsx")
+    console.log("Loader for city/_index.tsx")
     return null
 }

@@ -1,14 +1,14 @@
 
 // URL - "/concerts/trending"
-export default function Index() {
+export default function ConcertsTrendingContent() {
     return (
         <>
-            <p>Trending Concerts</p>
+            <p>Concerts Trending Content</p>
         </>
     )
 }
 
 export function loader() {
-    console.log("Loader for concerts.trending.jsx")
+    console.log("Loader for concerts.trending.tsx")
     return null
 }

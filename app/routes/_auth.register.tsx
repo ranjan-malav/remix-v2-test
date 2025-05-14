@@ -1,14 +1,14 @@
 
 // URL - "/register" _auth is skipped in the path but layout file is used
-export default function ConcertIndex() {
+export default function RegisterContent() {
     return (
         <>
-            <p>Register Page</p>
+            <p>Register Content</p>
         </>
     )
 }
 
 export function loader() {
-    console.log("Loader for _auth.register.jsx")
+    console.log("Loader for _auth.register.tsx")
     return null
 }

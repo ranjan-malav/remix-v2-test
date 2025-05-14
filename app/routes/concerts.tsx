@@ -1,10 +1,10 @@
 import { Outlet } from "@remix-run/react";
 
 // Layout file for /concerts
-export default function ConcertParent() {
+export default function ConcertLayout() {
     return (
         <div>
-            <h1>Concert Parent Content</h1>
+            <h1>Concert Layout</h1>
 
             <Outlet />
         </div>
@@ -12,6 +12,6 @@ export default function ConcertParent() {
 }
 
 export function loader() {
-    console.log("Loader for concerts.jsx")
+    console.log("Loader for concerts.tsx")
     return null
 }

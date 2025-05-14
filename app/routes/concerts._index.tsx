@@ -1,13 +1,13 @@
 // URL - "/concerts"
-export default function ConcertIndex() {
+export default function ConcertContent() {
     return (
         <>
-            <p>Concert Index</p>
+            <p>Concert Content</p>
         </>
     )
 }
 
 export function loader() {
-    console.log("Loader for concerts._index.jsx")
+    console.log("Loader for concerts._index.tsx")
     return null
 }

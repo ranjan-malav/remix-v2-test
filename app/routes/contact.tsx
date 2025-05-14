@@ -1,15 +1,16 @@
 import { Outlet } from "@remix-run/react"
 
-export default function AboutLayout() {
+// URL - "/contact"
+export default function ContactLayout() {
     return (
         <>
-            <p>About Layout</p>
+            <p>Contact Layout</p>
             <Outlet />
         </>
     )
 }
 
 export function loader() {
-    console.log("Loader for about.tsx")
+    console.log("Loader for contact.tsx")
     return null
 }

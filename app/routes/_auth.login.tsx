@@ -1,14 +1,14 @@
 
 // URL - "/login" _auth is skipped in the path but layout file is used
-export default function ConcertIndex() {
+export default function LoginContent() {
     return (
         <>
-            <p>Login Page</p>
+            <p>Login Content</p>
         </>
     )
 }
 
 export function loader() {
-    console.log("Loader for _auth.login.jsx")
+    console.log("Loader for _auth.login.tsx")
     return null
 }

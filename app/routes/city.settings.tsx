@@ -1,16 +1,16 @@
 import { Outlet } from "@remix-run/react";
 
-
-export default function App() {
+// URL - "/city/settings"
+export default function CitySettingsContent() {
     return (
         <div>
-            <h1>Settings Content</h1>
+            <h1>City Settings Content</h1>
             <Outlet />
         </div>
     )
 }
 
 export function loader() {
-    console.log("Loader for city.settings.jsx")
+    console.log("Loader for city.settings.tsx")
     return null
 }
