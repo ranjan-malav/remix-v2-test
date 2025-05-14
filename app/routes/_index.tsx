@@ -7,6 +7,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+// URL - "/"
 export default function Index() {
   return (
     <div className="flex h-screen items-center justify-center">
@@ -136,3 +137,8 @@ const resources = [
     ),
   },
 ];
+
+export function loader() {
+  console.log("Loader for _index.jsx")
+  return null
+}
