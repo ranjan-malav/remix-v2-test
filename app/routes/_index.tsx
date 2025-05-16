@@ -1,8 +1,9 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Page, Layout, Text, Card, Button, BlockStack, InlineStack } from "@shopify/polaris";
+import { Page, Layout, BlockStack } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
 import { StatsComponent } from "~/components/StatsComponent";
 import RecentJobsList from "~/components/RecentJobsList";
+import StartNewJob from "~/components/StartNewJob";
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,26 +24,7 @@ export default function HomePage() {
           </Layout.Section>
 
           <Layout.Section>
-            <Card>
-              <BlockStack gap="400">
-                <BlockStack gap="200">
-                  <Text as="h2" variant="headingMd">
-                    Update products with minimal efforts
-                  </Text>
-                  <Text variant="bodyMd" as="p">
-                    Bulk edit products with 3 simple steps.<br />
-                    Step 1: Filter & select products<br />
-                    Step 2: Define modifications<br />
-                    Step 3: Run/Schedule the job
-                  </Text>
-                </BlockStack>
-                <InlineStack>
-                  <Button variant="primary" onClick={undefined}>
-                    Generate a product
-                  </Button>
-                </InlineStack>
-              </BlockStack>
-            </Card>
+            <StartNewJob />
           </Layout.Section>
 
           <Layout.Section variant="oneThird" />
