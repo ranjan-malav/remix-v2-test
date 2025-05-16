@@ -36,7 +36,7 @@ export const StatsContent = (
                         <Box>
                             <Icon source={icon} tone="base" />
                         </Box>
-                        {loading ? <Box width="150px"><SkeletonDisplayText size="small" /></Box> : <Box width="150px"><SkeletonDisplayText size="small" /></Box>}
+                        {loading ? <Box width="150px"><SkeletonDisplayText size="medium" /></Box> : <Text as="p" variant="bodyMd">{value}</Text>}
                     </InlineStack>
                 </BlockStack>
             </Card>

@@ -1,4 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Page, Layout, Text, Card, Button, BlockStack, InlineStack } from "@shopify/polaris";
+import { TitleBar } from "@shopify/app-bridge-react";
+import { StatsComponent } from "~/components/StatsComponent";
+import RecentJobsList from "~/components/RecentJobsList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,49 +12,49 @@ export const meta: MetaFunction = () => {
 };
 
 // URL - "/"
-export default function Index() {
+export default function HomePage() {
   return (
-    <div className="flex h-screen items-center justify-center">
-      <div className="flex flex-col items-center gap-16">
-        <header className="flex flex-col items-center gap-9">
-          <h1 className="leading text-2xl font-bold text-gray-800 dark:text-gray-100">
-            Welcome to <span className="sr-only">Remix</span>
-          </h1>
-          <div className="h-[144px] w-[434px]">
-            <img
-              src="/logo-light.png"
-              alt="Remix"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src="/logo-dark.png"
-              alt="Remix"
-              className="hidden w-full dark:block"
-            />
-          </div>
-        </header>
-        <nav className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
-          <p className="leading-6 text-gray-700 dark:text-gray-200">
-            What&apos;s next?
-          </p>
-          <ul>
-            {resources.map(({ href, text, icon }) => (
-              <li key={href}>
-                <a
-                  className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {icon}
-                  {text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <Page fullWidth>
+      <TitleBar title={"Remix2"} />
+      <BlockStack gap="500">
+        <Layout>
+          <Layout.Section>
+            <StatsComponent />
+          </Layout.Section>
+
+          <Layout.Section>
+            <Card>
+              <BlockStack gap="400">
+                <BlockStack gap="200">
+                  <Text as="h2" variant="headingMd">
+                    Update products with minimal efforts
+                  </Text>
+                  <Text variant="bodyMd" as="p">
+                    Bulk edit products with 3 simple steps.<br />
+                    Step 1: Filter & select products<br />
+                    Step 2: Define modifications<br />
+                    Step 3: Run/Schedule the job
+                  </Text>
+                </BlockStack>
+                <InlineStack>
+                  <Button variant="primary" onClick={undefined}>
+                    Generate a product
+                  </Button>
+                </InlineStack>
+              </BlockStack>
+            </Card>
+          </Layout.Section>
+
+          <Layout.Section variant="oneThird" />
+
+          <Layout.Section>
+            <RecentJobsList />
+          </Layout.Section>
+
+          <Layout.Section variant="oneThird" />
+        </Layout>
+      </BlockStack>
+    </Page>
   );
 }
 
